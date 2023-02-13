@@ -22,7 +22,6 @@ run_script:
 	./script/gen-proto.sh
 
 swag:
-	go get -u github.com/swaggo/swag/cmd/swag
 	swag init -g ./api/router.go -o api/docs
 
 proto-gen:

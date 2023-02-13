@@ -59,7 +59,7 @@ func (h *handlerV1) Create(c *gin.Context) {
 // @Accept json
 // @Produce json
 // @Success 200 {object} user.UsersResponse
-// @Router /customer/list [get]
+// @Router /user/list [get]
 func (h *handlerV1) FindAll(c *gin.Context) {
 
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*time.Duration(h.cfg.CtxTimeout))

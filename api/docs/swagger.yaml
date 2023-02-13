@@ -38,21 +38,6 @@ info:
   title: Rest api
   version: "1.0"
 paths:
-  /customer/list:
-    get:
-      consumes:
-      - application/json
-      description: this func get all users
-      produces:
-      - application/json
-      responses:
-        "200":
-          description: OK
-          schema:
-            $ref: '#/definitions/user.UsersResponse'
-      summary: get all users
-      tags:
-      - user
   /user:
     post:
       consumes:
@@ -94,6 +79,21 @@ paths:
           schema:
             $ref: '#/definitions/user.UserResponse'
       summary: get user info
+      tags:
+      - user
+  /user/list:
+    get:
+      consumes:
+      - application/json
+      description: this func get all users
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/user.UsersResponse'
+      summary: get all users
       tags:
       - user
 swagger: "2.0"
