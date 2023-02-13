@@ -15,7 +15,6 @@ import (
 
 // @BasePath /api/v1
 
-// PingExample godoc
 // @Summary create user with info
 // @Description this func create user
 // @Tags user

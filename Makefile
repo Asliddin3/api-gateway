@@ -1,22 +1,7 @@
 CURRENT_DIR=$(pwd)
-pull_submodule:
-	git submodule update --init --recursive
-
-update_submodule:
-	git submodule update --remote --merge
 
 run:
 	go run cmd/main.go
-
-create:
-	migrate create -ext sql -dir migrations -seq create_admin_table
-
-up-version:
-	migrate -source file:./migrations/ -database 'postgres://postgres:compos1995@locahost:5432/api?sslmode=disable' up
-
-
-create_proto_submodule:
-	git submodule add git@github.com:Asliddin3/Proto-Submodule-Product-servise.git
 
 run_script:
 	./script/gen-proto.sh
