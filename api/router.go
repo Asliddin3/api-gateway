@@ -6,7 +6,6 @@ import (
 	"github.com/Asliddin3/api-gateway/config"
 	"github.com/Asliddin3/api-gateway/pkg/logger"
 	"github.com/Asliddin3/api-gateway/services"
-	"github.com/Asliddin3/api-gateway/storage/repo"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	swaggerFiles "github.com/swaggo/files"
@@ -18,7 +17,6 @@ type Option struct {
 	Conf           config.Config
 	Logger         logger.Logger
 	ServiceManager services.IServiceManager
-	Redis          repo.RedisRepo
 }
 
 // New ...
@@ -46,7 +44,6 @@ func New(option Option) *gin.Engine {
 		Logger:         option.Logger,
 		ServiceManager: option.ServiceManager,
 		Cfg:            option.Conf,
-		Redis:          option.Redis,
 	})
 
 	router.Use(cors.New(cors.Config{
