@@ -1,0 +1,99 @@
+basePath: /v1
+definitions:
+  user.UserRequest:
+    properties:
+      Age:
+        type: integer
+      Name:
+        type: string
+      Phone:
+        type: string
+    type: object
+  user.UserResponse:
+    properties:
+      Age:
+        type: integer
+      Id:
+        type: integer
+      Name:
+        type: string
+      Phone:
+        type: string
+    type: object
+  user.UsersResponse:
+    properties:
+      Users:
+        items:
+          $ref: '#/definitions/user.UserResponse'
+        type: array
+    type: object
+host: localhost:8070
+info:
+  contact:
+    email: asliddinvstalim@gmail.com
+    name: Asliddin
+    url: https://t.me/asliddindeh
+  description: This is tz api
+  termsOfService: not much usefull
+  title: Rest api
+  version: "1.0"
+paths:
+  /customer/list:
+    get:
+      consumes:
+      - application/json
+      description: this func get all users
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/user.UsersResponse'
+      summary: get all users
+      tags:
+      - user
+  /user:
+    post:
+      consumes:
+      - application/json
+      description: this func create user
+      parameters:
+      - description: User
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/user.UserRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/user.UserResponse'
+      summary: create user with info
+      tags:
+      - user
+  /user/{id}:
+    get:
+      consumes:
+      - application/json
+      description: this func get user info
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/user.UserResponse'
+      summary: get user info
+      tags:
+      - user
+swagger: "2.0"
