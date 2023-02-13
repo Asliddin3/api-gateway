@@ -14,6 +14,7 @@ type handlerV1 struct {
 	redis          repo.RedisRepo
 }
 
+//HandlerV1Config api configuration
 type HandlerV1Config struct {
 	Logger         logger.Logger
 	ServiceManager services.IServiceManager
@@ -21,6 +22,7 @@ type HandlerV1Config struct {
 	Redis          repo.RedisRepo
 }
 
+//New connect to services
 func New(c *HandlerV1Config) *handlerV1 {
 	return &handlerV1{
 		log:            c.Logger,

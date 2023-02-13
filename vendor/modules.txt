@@ -1,10 +1,6 @@
 # github.com/KyleBanks/depth v1.2.1
 ## explicit
 github.com/KyleBanks/depth
-# github.com/cpuguy83/go-md2man/v2 v2.0.2
-## explicit; go 1.11
-# github.com/ghodss/yaml v1.0.0
-## explicit
 # github.com/gin-contrib/cors v1.4.0
 ## explicit; go 1.13
 github.com/gin-contrib/cors
@@ -92,10 +88,6 @@ github.com/pelletier/go-toml/v2
 github.com/pelletier/go-toml/v2/internal/ast
 github.com/pelletier/go-toml/v2/internal/danger
 github.com/pelletier/go-toml/v2/internal/tracker
-# github.com/russross/blackfriday/v2 v2.1.0
-## explicit
-# github.com/shurcooL/sanitized_anchor_name v1.0.0
-## explicit
 # github.com/spf13/cast v1.5.0
 ## explicit; go 1.18
 github.com/spf13/cast
@@ -111,10 +103,6 @@ github.com/swaggo/swag
 # github.com/ugorji/go/codec v1.2.7
 ## explicit; go 1.11
 github.com/ugorji/go/codec
-# github.com/urfave/cli/v2 v2.24.3
-## explicit; go 1.18
-# github.com/xrash/smetrics v0.0.0-20201216005158-039620a65673
-## explicit
 # go.uber.org/atomic v1.7.0
 ## explicit; go 1.13
 go.uber.org/atomic
